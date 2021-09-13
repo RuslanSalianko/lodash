@@ -1,0 +1,2 @@
+# lodash
+Create methods lodash.
