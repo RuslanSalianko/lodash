@@ -8,5 +8,4 @@ function compact(arr) {
   return arr.filter(val => !!val);
 }
 
-console.log(compact([0, 1, false, 2, '', 3]))
-// =>[1, 2, 3]
+export default compact;

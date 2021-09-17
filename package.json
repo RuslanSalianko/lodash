@@ -1,0 +1,25 @@
+{
+  "name": "lodash",
+  "version": "1.0.0",
+  "description": "Create methods lodash.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test/test.js"
+  },
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RuslanSalianko/lodash.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RuslanSalianko/lodash/issues"
+  },
+  "homepage": "https://github.com/RuslanSalianko/lodash#readme",
+  "dependencies": {
+    "chai": "^4.3.4",
+    "mocha": "^9.1.1"
+  }
+}
