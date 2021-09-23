@@ -6,9 +6,7 @@
  * @returns {Array} Returns the slice of array.
  */
 function drop(arr, n = 1) {
-  return arr.filter((item, index) => {
-    return index >= n;
-  })
+  return arr.slice(n);
 }
 
 export default drop;
