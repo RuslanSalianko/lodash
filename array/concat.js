@@ -5,15 +5,14 @@
  * @param  {...any} values  The values to concatenate.
  * @returns {Array} Returns the new concatenated array.
  */
-function concat(arr, ...values) {
-  values.forEach(item => {
+function concat(...values) {
+  return values.map(item => {
     if (Array.isArray(item)) {
-      arr.push(item[0]);
+      return item[0];
     } else {
-      arr.push(item);
+      return item;
     }
-  })
-  return arr;
+  });
 }
 
 export default concat;
