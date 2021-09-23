@@ -5,9 +5,7 @@
  * @returns {Array} Returns the slice of array.
  */
 function initial(arr) {
-  return arr.filter((item, index) => {
-    return index !== arr.length - 1;
-  });
+  return arr.slice(0,arr.length-1);
 }
 
 export default initial;
