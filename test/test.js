@@ -1,8 +1,11 @@
 import { equal } from 'assert';
 import chai from 'chai';
-import compact from '../array/compact.js';
+
+import compact from '../array/compact.js'
+import initial from '../array/initial.js';
 import drop from '../array/drop.js';
 import head from '../array/head.js';
+
 
 const expect = chai.expect;
 
@@ -16,6 +19,12 @@ describe('Array', () => {
     });
   });
 
+  describe('#initial(). Gets all but the last element of array.', () => {
+    it("initial([1, 2, 3] => [1, 2])", () => {
+      expect(initial([1, 2, 3])).to.eql([1, 2]);
+    });
+    it("initial([Nan, 2, 100, undefine]) => [NaN, 2, 100]", () => {
+      expect(initial([NaN, 2, 100, undefined])).to.eql([NaN, 2, 100]);
 
   describe('#drop(). Creates a slice of array with n elements dropped from the beginning.', () => {
     it("drop([1, 2, 3]) => [2, 3]", () => {
