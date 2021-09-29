@@ -6,13 +6,15 @@
  * @returns {Array} Returns the new concatenated array.
  */
 function concat(...values) {
-  return values.map(item => {
-    if (Array.isArray(item)) {
-      return item[0];
+  let arr = [];
+  values.forEach((item) => {
+    if(Array.isArray(item)) {
+      Array.prototype.push.apply(arr,item);
     } else {
-      return item;
+      arr.push(item);
     }
   });
+  return arr;
 }
 
 export default concat;
