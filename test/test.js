@@ -2,6 +2,7 @@ import { equal } from 'assert';
 import chai from 'chai';
 import compact from '../array/compact.js';
 import drop from '../array/drop.js';
+import head from '../array/head.js';
 
 const expect = chai.expect;
 
@@ -14,6 +15,7 @@ describe('Array', () => {
       expect(compact([20, NaN, false, 0, '', null])).to.eql([20]);
     });
   });
+
 
   describe('#drop(). Creates a slice of array with n elements dropped from the beginning.', () => {
     it("drop([1, 2, 3]) => [2, 3]", () => {
@@ -31,5 +33,16 @@ describe('Array', () => {
     it("drop([1, 2, 3], 0) => [1, 2, 3]", () => {
       expect(drop([1, 2, 3], 0)).to.eql([1, 2, 3]);
     });
+
+  describe('#head(). Gets the first element of array', () => {
+    it("head([1,2,3] => 1", () => {
+      equal(head([1, 2, 3]), 1);
+    });
+    it("head([NaN,2,3] => NaN", () => {
+      equal(head([NaN, 2, 3]), NaN);
+    });
+    it("head([]) => undefine", () => {
+      equal(head([]),undefined);
+    })
   });
 });
